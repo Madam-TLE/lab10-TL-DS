@@ -53,9 +53,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(logarithm(1, 5), 0)
         self.assertEqual(logarithm(1, 5), 0)
     def test_hypotenuse(self):
-        self.assertEqual(hypotenuse(2), 2)
-        self.assertEqual(hypotenuse(3), 2)
-        self.assertEqual(hypotenuse(4), 2)
+        self.assertEqual(hypotenuse(2, 3), 3)
+        self.assertEqual(hypotenuse(3, 4), 5)
+        self.assertEqual(hypotenuse(4, 5), 5)
     def test_sqrt(self):
         with self.assertRaises(ValueError):
             square_root(0)
