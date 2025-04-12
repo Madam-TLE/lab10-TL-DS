@@ -11,16 +11,21 @@ One function per operation, in order.
 import math
 
 def square_root(a):
-    try:
-        return math.sqrt(a)
-    except ValueError as e:
-        print(e)
+    if a <= 0:
+        raise ValueError
+    return math.sqrt(a)
 
 def hypotenuse(a, b):
-    try:
+    '''try:
         math.hypot(a, b)
     except TypeError as e:
-        print(e)
+        print(e)'''
+    if a.is_string():
+        raise TypeError
+    if b.is_string():
+        raise TypeError
+    return math.hypot(a, b)
+
 
 def add(a, b):
     return a + b
