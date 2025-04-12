@@ -59,7 +59,7 @@ class TestCalculator(unittest.TestCase):
     def test_hypotenuse(self):
         with self.assertRaises(TypeError):
             hypotenuse("1", "1")
-        self.assertAlmostEqual(hypotenuse(8, 4), 7)
+        self.assertAlmostEqual(hypotenuse(8, 4), 8.94)
         self.assertEqual(hypotenuse(3, 4), 5)
         self.assertAlmostEqual(hypotenuse(4, 5), 6.4)
 
