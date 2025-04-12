@@ -27,7 +27,6 @@ def subtract(a, b):
 def mul(a, b):
     return a * b
 
-
 def logarithm(a, b):
     try:
         a.log(b)
