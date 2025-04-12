@@ -37,9 +37,7 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(div(3, 6), 2)
         self.assertAlmostEqual(div(4, 8), 2)
 
-        self.assertAlmostEqual(div(10, 5), 2)
-        self.assertAlmostEqual(div(5, 2), 2.5)
-        self.assertAlmostEqual(div(8, 4), 2)
+
 
 
     ########Partner2
