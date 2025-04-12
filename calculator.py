@@ -27,6 +27,12 @@ def subtract(a, b):
 def mul(a, b):
     return a * b
 
+def div(a, b):
+    try:
+        a / b # raise ZeroDivisionError if a == 0
+    except ZeroDivisionError as e:
+        print(e)
+
 def logarithm(a, b):
     try:
         a.log(b)
