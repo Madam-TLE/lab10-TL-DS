@@ -16,6 +16,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(2, 3), 5)
         self.assertEqual(add(2, 5), 7)
         self.assertEqual(add(3, 5), 8)
+
     def test_subtract(self): # 3 assertions
         #a = 5
         #b = 2
@@ -32,7 +33,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide(self):
         self.assertAlmostEqual(div(10, 5), 2)
-        self.assertAlmostEqual(div(5, 3), 2)
+        self.assertAlmostEqual(div(5, 2), 2.5)
         self.assertAlmostEqual(div(8, 4), 2)
 
     ########Partner2
@@ -44,26 +45,32 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(logarithm(2, 2), 1)
         self.assertEqual(logarithm(8, 2), 3)
         self.assertEqual(logarithm(16, 4), 2)
+
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
             logarithm(2, -1)
+
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
             logarithm(0, 5)
         self.assertEqual(logarithm(1, 5), 0)
         self.assertEqual(logarithm(1, 5), 0)
+
     def test_hypotenuse(self):
         with self.assertRaises(TypeError):
             hypotenuse("1", "1")
-        self.assertAlmostEqual(hypotenuse(2, 3), 3)
+        self.assertAlmostEqual(hypotenuse(8, 4), 7)
         self.assertEqual(hypotenuse(3, 4), 5)
-        self.assertAlmostEqual(hypotenuse(4, 5), 5)
+        self.assertAlmostEqual(hypotenuse(4, 5), 6.4)
+
     def test_sqrt(self):
         with self.assertRaises(ValueError):
             square_root(0)
         self.assertAlmostEqual(square_root(1), 1)
-        self.assertAlmostEqual(square_root(2), 1)
-        self.assertAlmostEqual(square_root(3), 1)
+        self.assertAlmostEqual(square_root(4), 2)
+        self.assertAlmostEqual(square_root(16), 4)
+
+
 # Do not touch this
 if __name__ == "__main__":
     unittest.main()
