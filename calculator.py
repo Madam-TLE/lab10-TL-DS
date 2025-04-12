@@ -1,9 +1,4 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
 
-One function per operation, in order.
-"""
 # https://github.com/Madam-TLE/lab10-TL-DS.git
 # Partner 1: Trish Le
 # Partner 2: Diego Salazar
@@ -11,17 +6,34 @@ One function per operation, in order.
 import math
 
 def square_root(a):
+
     try:
         math.sqrt(a)
     except ValueError:
         raise ValueError
     return math.sqrt(a)
+
+    if a <= 0:
+        raise ValueError
+    return math.sqrt(a)
+
+
 def hypotenuse(a, b):
     try:
         math.hypot(a, b)
+
     except TypeError:
         raise TypeError
     return math.hypot(a, b)
+
+
+    #if type(a) == str:
+    #   raise TypeError
+    #if type(b) == str:
+    #    raise TypeError
+    #return math.hypot(a, b)
+
+
 
 def add(a, b):
     return a + b
