@@ -12,15 +12,16 @@ import math
 
 def square_root(a):
     try:
-        return math.sqrt(a)
-    except ValueError as e:
-        print(e)
-
+        math.sqrt(a)
+    except ValueError:
+        raise ValueError
+    return math.sqrt(a)
 def hypotenuse(a, b):
     try:
         math.hypot(a, b)
-    except TypeError as e:
-        print(e)
+    except TypeError:
+        raise TypeError
+    return math.hypot(a, b)
 
 def add(a, b):
     return a + b
@@ -38,9 +39,9 @@ def div(a, b):
     #    print(e)
     #might have to raise ZeroDivisionError instead of try-excepting so self.assertRaises(ZeroDivisionError) works
     #in the test_divide_by_zero function
-    if b == 0:
+    if a == 0:
         raise ZeroDivisionError
-    return a / b
+    return b / a
 
 def logarithm(a, b):
     #try:

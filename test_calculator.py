@@ -31,14 +31,14 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(mul(6, 7), 42)
 
     def test_divide(self):
-        self.assertAlmostEqual(div(10, 5), 2)
-        self.assertAlmostEqual(div(5, 3), 2)
-        self.assertAlmostEqual(div(8, 4), 2)
+        self.assertAlmostEqual(div(5, 10), 2)
+        self.assertAlmostEqual(div(3, 6), 2)
+        self.assertAlmostEqual(div(4, 8), 2)
 
     ########Partner2
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            div(5, 0)
+            div(0, 5)
 
     def test_logarithm(self):
         self.assertEqual(logarithm(2, 2), 1)
@@ -55,15 +55,15 @@ class TestCalculator(unittest.TestCase):
     def test_hypotenuse(self):
         with self.assertRaises(TypeError):
             hypotenuse("1", "1")
-        self.assertAlmostEqual(hypotenuse(2, 3), 3)
+        self.assertEqual(hypotenuse(6, 8), 10)
         self.assertEqual(hypotenuse(3, 4), 5)
-        self.assertAlmostEqual(hypotenuse(4, 5), 5)
+        self.assertEqual(hypotenuse(-3, -4), 5)
     def test_sqrt(self):
         with self.assertRaises(ValueError):
-            square_root(0)
+            square_root(-1)
         self.assertAlmostEqual(square_root(1), 1)
-        self.assertAlmostEqual(square_root(2), 1)
-        self.assertAlmostEqual(square_root(3), 1)
+        self.assertAlmostEqual(square_root(4), 2)
+        self.assertAlmostEqual(square_root(9), 3)
 # Do not touch this
 if __name__ == "__main__":
     unittest.main()
