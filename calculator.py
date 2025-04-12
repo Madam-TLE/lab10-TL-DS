@@ -24,9 +24,8 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
-def multiply(a, b):
+def mul(a, b):
     return a * b
-
 
 
 def logarithm(a, b):
@@ -35,5 +34,5 @@ def logarithm(a, b):
     except ValueError as e:
         print(e)
 
-def exponent(a, b):
+def exp(a, b):
     a**b
