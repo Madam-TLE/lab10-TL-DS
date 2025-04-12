@@ -25,19 +25,18 @@ class TestCalculator(unittest.TestCase):
         subtracted_two = subtract(a,b)
         assert subtracted == subtracted_two
 
-    ######## Partner 1
-
     def test_multiply(self):
         self.assertEqual(mul(2, 3), 6)
         self.assertEqual(mul(4, 5), 20)
         self.assertEqual(mul(6, 7), 42)
+
 
     def test_divide(self):
         self.assertAlmostEqual(div(10, 5), 2)
         self.assertAlmostEqual(div(5, 3), 2)
         self.assertAlmostEqual(div(8, 4), 2)
 
-    ########Partner2
+
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
             div(5, 0)
@@ -52,8 +51,7 @@ class TestCalculator(unittest.TestCase):
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
             logarithm(2, -1)
-    
-    ######## Partner 1
+
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
