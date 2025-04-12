@@ -20,9 +20,9 @@ def hypotenuse(a, b):
         math.hypot(a, b)
     except TypeError as e:
         print(e)'''
-    if a.is_string():
+    if type(a) == str:
         raise TypeError
-    if b.is_string():
+    if type(b) == str:
         raise TypeError
     return math.hypot(a, b)
 
