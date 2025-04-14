@@ -1,4 +1,3 @@
-
 # https://github.com/Madam-TLE/lab10-TL-DS.git
 # Partner 1: Trish Le
 # Partner 2: Diego Salazar
