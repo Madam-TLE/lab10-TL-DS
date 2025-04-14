@@ -1,31 +1,38 @@
+
 # https://github.com/Madam-TLE/lab10-TL-DS.git
 # Partner 1: Trish Le
 # Partner 2: Diego Salazar
-"""
-calculator.py
-- Defines functions used to create a simple calculator
-
-One function per operation, in order.
-"""
-
 
 import math
 
 def square_root(a):
+
+    try:
+        math.sqrt(a)
+    except ValueError:
+        raise ValueError
+    return math.sqrt(a)
+
     if a <= 0:
         raise ValueError
     return math.sqrt(a)
 
+
 def hypotenuse(a, b):
-    '''try:
+    try:
         math.hypot(a, b)
-    except TypeError as e:
-        print(e)'''
-    if type(a) == str:
-        raise TypeError
-    if type(b) == str:
+
+    except TypeError:
         raise TypeError
     return math.hypot(a, b)
+
+
+    #if type(a) == str:
+    #   raise TypeError
+    #if type(b) == str:
+    #    raise TypeError
+    #return math.hypot(a, b)
+
 
 
 def add(a, b):
@@ -44,9 +51,9 @@ def div(a, b):
     #    print(e)
     #might have to raise ZeroDivisionError instead of try-excepting so self.assertRaises(ZeroDivisionError) works
     #in the test_divide_by_zero function
-    if b == 0:
+    if a == 0:
         raise ZeroDivisionError
-    return a / b
+    return b / a
 
 def logarithm(a, b):
     #try:
