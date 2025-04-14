@@ -1,9 +1,9 @@
-import unittest
-from calculator import *
-
 # https://github.com/Madam-TLE/lab10-TL-DS.git
 # Partner 1: Trish Le
 # Partner 2: Diego Salazar
+
+import unittest
+from calculator import *
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
